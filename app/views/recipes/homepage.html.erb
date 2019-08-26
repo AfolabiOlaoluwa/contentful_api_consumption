@@ -1,0 +1,27 @@
+<% if @recipe.blank? %>
+  <div class="container">
+    <%= flash_messages_for(RecipesController) %>
+  </div>
+<% else %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+        <h1>All Recipes </h1>
+      </div>
+    </div>
+    <div class="row">
+      <% @recipe.each do |recipe| %>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+          <div class="card">
+            <%= link_to recipe_path(recipe.id) do %>
+              <%= image_tag recipe.photo.url(width: 300, height: 200, format: 'png', quality: 100), class: 'img-responsive' %>
+              <div class="card-block">
+                <h5 class="text-bold"><%= recipe.title %></h5>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
