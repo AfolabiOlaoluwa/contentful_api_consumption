@@ -10,7 +10,7 @@ Rails is a modular application which allows us to module just only what we need 
 
 It is possible this solution will evolve to microservice hence why I am using Service Object to interact with the API (Contentful API). So that we can extract the code out.
 
-##### Other different ways I do this solution?
+##### Other different ways I will do this solution?
 
 * By using HER Gem to solve this. HER Gem is an ORM (Object Relational Mapper) that maps REST resources to Ruby objects. It is designed to build applications that are powered by a RESTful API instead of a database.
 

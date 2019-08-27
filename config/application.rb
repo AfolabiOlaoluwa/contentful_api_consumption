@@ -21,5 +21,6 @@ module ContentfulApiConsumption
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.exceptions_app = ->(env) { ExceptionsController.action(:show).call(env) }
   end
 end
